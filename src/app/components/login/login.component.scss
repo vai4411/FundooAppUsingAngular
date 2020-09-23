@@ -2,10 +2,21 @@ $blue: #0606F8;
 $red: #D10303;
 $yellow: #F0B000;
 $green: #2D9C2D;
+$purple: #3E3EEE;
+$light-purple: #3E3FFF;
+$white: #FFFFFF;
+
+.main-card{
+    margin-top: 12vh;
+    min-width: 25vw;
+    min-height: 65vh;
+    padding-top: 3%;
+}
 
 .login-heading{
     font-size: 26px;
     font-weight: bolder;
+    font-family: fantasy;
 }
 
 .blue-letter{
@@ -24,27 +35,47 @@ $green: #2D9C2D;
     color: $green;
 }
 
-.example-form {
+.sign-in{
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 5%;
+}
+
+.welcome{
+    font-size: 24px;
+    padding-top: 13%;
+}
+
+.login-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $white;
+    font-size: 18px;
+    padding-top: 10%;
+    padding-bottom: 5%;
   }
 
-  .example-full-width {
+  .login-full-width {
     width: 100%;
   }
 
-  .example-container .mat-form-field + .mat-form-field {
+  .login-full-width button{
+    border-style: none;
+    outline: none;
+    background-color: $white;
+  }
+
+  .login-container .mat-form-field + .mat-form-field {
     margin-left: 8px;
   }
 
-  .example-right-align {
+  .login-right-align {
     text-align: right;
   }
 
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
+  input.login-right-align::-webkit-outer-spin-button,
+  input.login-right-align::-webkit-inner-spin-button {
     display: none;
   }
 
@@ -52,12 +83,15 @@ $green: #2D9C2D;
     -moz-appearance: textfield;
   }
 
-  .password{
-      color: white;
+  .login-button{
+      background-color: $purple;
+      border-style: none;
+      outline: none;
+      padding: 2.8% 5.7%;
+      border-radius: 5.3%;
+      display: flex;
   }
 
-  .password button{
-    border-style: none;
-    outline: none;
-    background-color: white;
+  .login-button:hover{
+      background-color: $light-purple;
   }
