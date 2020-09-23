@@ -1,6 +1,11 @@
 <mat-card>
-    <div>
-        Fundoo
+    <div class="login-heading">
+        <p>F</p>
+        <p>u</p>
+        <p>n</p>
+        <p>d</p>
+        <p>o</p>
+        <p>o</p>
     </div>
     <div>
         Sign in
@@ -14,7 +19,7 @@
           <input matInput>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="password">
             <mat-label>Password*</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">

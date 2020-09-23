@@ -1,7 +1,13 @@
+.login-heading{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
+    background-color: #ffffff;
   }
 
   .example-full-width {
@@ -23,4 +29,14 @@
 
   input.example-right-align {
     -moz-appearance: textfield;
+  }
+
+  .password{
+      color: white;
+  }
+
+  .password button{
+    border-style: none;
+    outline: none;
+    background-color: white;
   }
