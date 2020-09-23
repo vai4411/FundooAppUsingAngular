@@ -16,7 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatFormFieldModule,
     TextFieldModule,
-    MatIconModule
+    MatIconModule,
   ],
 })
 export class MaterialModule {}

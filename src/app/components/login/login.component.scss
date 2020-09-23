@@ -1,6 +1,27 @@
+$blue: #0606F8;
+$red: #D10303;
+$yellow: #F0B000;
+$green: #2D9C2D;
+
 .login-heading{
     font-size: 26px;
     font-weight: bolder;
+}
+
+.blue-letter{
+    color: $blue;
+}
+
+.red-letter{
+    color: $red;
+}
+
+.yellow-letter{
+    color: $yellow;
+}
+
+.green-letter{
+    color: $green;
 }
 
 .example-form {
