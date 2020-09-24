@@ -6,6 +6,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [],
@@ -17,6 +20,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     TextFieldModule,
     MatIconModule,
+    MatSidenavModule,
+    MatSelectModule,
+    MatListModule,
   ],
 })
 export class MaterialModule {}
