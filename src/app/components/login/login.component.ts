@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FundooService } from './../../service/fundoo_service/fundoo.service';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +11,10 @@ import { FundooService } from './../../service/fundoo_service/fundoo.service';
 export class LoginComponent implements OnInit {
 
   hide:boolean = true
-  userEmail:string
-  userPassword:string
+  loginForm = new FormGroup({
+    email: new FormControl('',Validators.email),
+    password: new FormControl('',Validators.required)
+  })
   fundooService:FundooService
 
   constructor(fundooService:FundooService) {
@@ -20,19 +24,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  email(data){
-    this.userEmail=data.target.value;
-  }
-
-  password(data){
-    this.userPassword=data.target.value;
-  }
-
   login(){
-    console.log(this.userEmail);
     let data={
-      email: this.userEmail,
-      password: this.userPassword,
+      email: this.loginForm.value["email"],
+      password: this.loginForm.value["password"],
       cartId: ""
     }
 
