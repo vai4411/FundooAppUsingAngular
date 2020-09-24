@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FundooServiceService } from '../fundoo_service/fundoo-service.service';
+import { FundooService } from './fundoo.service';
 
 describe('FundooServiceService', () => {
-  let service: FundooServiceService;
+  let service: FundooService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FundooServiceService);
+    service = TestBed.inject(FundooService);
   });
 
   it('should be created', () => {

@@ -1,12 +1,12 @@
 <div fxLayoutAlign="center">
 <mat-card class="main-card">
     <div class="login-heading" fxLayout="row" fxLayoutAlign="center">
-        <p class="blue-letter">F</p>
-        <p class="red-letter">u</p>
-        <p class="yellow-letter">n</p>
-        <p class="blue-letter">d</p>
-        <p class="green-letter">o</p>
-        <p class="red-letter">o</p>
+        <span class="blue-letter">F</span>
+        <span class="red-letter">u</span>
+        <span class="yellow-letter">n</span>
+        <span class="blue-letter">d</span>
+        <span class="green-letter">o</span>
+        <span class="red-letter">o</span>
     </div>
     <div class="sign-in" fxLayoutAlign="center">
         Sign in
@@ -17,12 +17,12 @@
     <form class="login-form">
         <mat-form-field class="login-full-width">
           <mat-label>Email Id*</mat-label>
-          <input matInput>
+          <input matInput (change)="email($event)">
         </mat-form-field>
 
         <mat-form-field class="login-full-width">
             <mat-label>Password*</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" (change)="password($event)">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
              [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -30,7 +30,7 @@
         </mat-form-field>
     </form>
     <div fxLayoutAlign="end">
-      <button mat-raised-button class="login-button">Log In</button>
+      <button mat-raised-button class="login-button" (click)="login()">Log In</button>
     </div>
 </mat-card>
 </div>
