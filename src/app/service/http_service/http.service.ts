@@ -11,4 +11,14 @@ export class HttpService {
   postService(data,url: string) {
     return this.http.post(url,data);
   }
+
+  postNoteService(data,url:string){
+    return this.http.post(url,data,{
+      headers: {'Authorization':localStorage.getItem('fundooUserToken')}});
+  }
+
+  getNotesService(url:string){
+    return this.http.get(url,{
+      headers: {'Authorization':localStorage.getItem('fundooUserToken')}});
+  }
 }

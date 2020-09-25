@@ -13,4 +13,14 @@ export class UserService {
     return this.http
     .postService(data, this.baseUrl + 'user/login');
   }
+
+  addNotes(data) {
+    return this.http
+    .postNoteService(data, this.baseUrl + 'notes/addNotes');
+  }
+
+  getNotes() {
+    return this.http
+    .getNotesService(this.baseUrl + 'notes/getNotesList');
+  }
 }

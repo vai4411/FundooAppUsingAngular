@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     this.userService
     .login(data)
     .subscribe(
-      response => console.log(response),
+      response => {console.log(response);localStorage.setItem('fundooUserToken',response['id']);},
       error => console.log(error)
     );
   }

@@ -1,0 +1,17 @@
+<mat-card tabindex="1" (click)="setFlag(true)" [ngClass]="isDataPresent ? 'active-add-note':'add-note'">
+    <form [formGroup]="addNote" (ngSubmit)="addNotes()">
+    <div fxLayout="row" (change)="setFlag(true)" [ngClass]="isDataPresent? 'active-input' : 'title-input'">
+        <input type="text" placeholder="Title" formControlName="title">
+    </div>
+    <div fxLayout="row" class="note-input">
+        <textarea type="text" placeholder="Take a note..." formControlName="note" ></textarea>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="icons">
+        <div fxLayout="row">
+        <i class="fas fa-palette" style="font-size: 20px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fas fa-archive" style="font-size: 20px;"></i>
+        </div>
+        <button mat-raised-button class="close-button">Close</button>
+    </div>
+    </form>
+</mat-card>

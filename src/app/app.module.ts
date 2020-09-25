@@ -12,6 +12,7 @@ import { MatMenuModule} from '@angular/material/menu';
 import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AddNoteComponent } from './components/add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     SidenavListComponent,
     HeaderComponent,
     LayoutComponent,
+    AddNoteComponent,
   ],
   imports: [
     BrowserModule,
