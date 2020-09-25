@@ -8,11 +8,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponenets } from './app-routing.module';
+import { MatMenuModule} from '@angular/material/menu';
+import { SidenavListComponent } from './components/sidenav-list/sidenav-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponenets
+    routingComponenets,
+    SidenavListComponent,
+    HeaderComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,8 @@ import { AppRoutingModule, routingComponenets } from './app-routing.module';
     FlexLayoutModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

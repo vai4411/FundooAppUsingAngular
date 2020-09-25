@@ -1,36 +1,48 @@
-<div fxLayoutAlign="center">
-<mat-card class="main-card">
-    <div class="login-heading" fxLayout="row" fxLayoutAlign="center">
-        <span class="blue-letter">F</span>
-        <span class="red-letter">u</span>
-        <span class="yellow-letter">n</span>
-        <span class="blue-letter">d</span>
-        <span class="green-letter">o</span>
-        <span class="red-letter">o</span>
-    </div>
-    <div class="sign-in" fxLayoutAlign="center">
-        Sign in
-    </div>
-    <div class="welcome" fxLayoutAlign="center">
-        Continue to Fundoo
-    </div>
-    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login()">
-        <mat-form-field class="login-full-width">
-          <mat-label>Email Id</mat-label>
-          <input matInput formControlName="email" required>
-        </mat-form-field>
-
-        <mat-form-field class="login-full-width">
-            <mat-label>Password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-             [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-        </mat-form-field>
-        <button mat-raised-button class="login-button" type="submit" [disabled]="!loginForm.valid">
-            Log In
-        </button>
-    </form>
-</mat-card>
+<div class="login" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+    <mat-card class="login-mat-card">
+        <div fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center"class="mat-box">
+            <div class="fundoo">
+                <span class="blue">F</span>
+                <span class="red">u</span>
+                <span class="yellow">n</span>
+                <span class="blue">d</span>
+                <span class="green">o</span>
+                <span class="red">o</span>
+            </div>
+            <div class="signin">Sign in</div>
+            <div class="account">Use Your Fundoo Account</div>
+        </div>
+        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login()">
+        <div class="input-box" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap=35px
+        fxLayoutAlign.xs="center center">
+            <div fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center" class="sub-class-one">
+                <mat-form-field appearance="outline" fxLayoutAlign.xs="center center">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Enter your email address" class="input-box-one"
+                    formControlName="email" required>
+                </mat-form-field>
+            </div>
+            <div fxLayoutAlign="center center" fxLayoutAlign.xs="center center" class="sub-class-two">
+                <mat-form-field appearance="outline" fxLayoutAlign.xs="center center">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'"
+                    placeholder="Enter your password" formControlName="password" required>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                     [attr.aria-pressed]="hide" class="hide-button">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="center center"
+             fxLayoutGap=135px class="sub-class-three">
+                <div class="create-link">
+                    <a href="#">Create Account</a>
+                </div>
+                <div>
+                    <button mat-raised-button class="sign-in-btn">Sign In</button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </mat-card>
 </div>

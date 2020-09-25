@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-dash-board',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashBoardComponent implements OnInit {
 
+  @Output() sidenavClose = new EventEmitter();
+  @Output() sidenavToggle = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public onSidenavClose = () => {
+    this.sidenavClose.emit();
+  }
+
+  public onToggleSidenav = () => {
+    this.sidenavToggle.emit();
   }
 
 }

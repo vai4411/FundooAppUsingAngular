@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FundooService } from './../../service/fundoo_service/fundoo.service';
+import { UserService } from '../../service/user_service/user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
@@ -15,10 +15,10 @@ export class LoginComponent implements OnInit {
     email: new FormControl('',Validators.email),
     password: new FormControl('',Validators.required)
   })
-  fundooService:FundooService
+  userService:UserService
 
-  constructor(fundooService:FundooService) {
-    this.fundooService=fundooService;
+  constructor(userService:UserService) {
+    this.userService=userService;
   }
 
   ngOnInit(): void {
@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
       cartId: ""
     }
 
-    this.fundooService
+    this.userService
     .login(data)
     .subscribe(
-      result => console.log(result),
+      response => console.log(response),
       error => console.log(error)
     );
   }

@@ -1,97 +1,107 @@
-$blue: #0606F8;
-$red: #D10303;
-$yellow: #F0B000;
-$green: #2D9C2D;
-$purple: #3E3EEE;
-$light-purple: #3E3FFF;
-$white: #FFFFFF;
-
-.main-card{
-    margin-top: 12vh;
-    min-width: 20vw;
-    min-height: 65vh;
-    padding-top: 3%;
+.login{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.login-heading{
-    font-size: 26px;
-    font-weight: bolder;
-    font-family: fantasy;
+.login-mat-card{
+  position: fixed;
+  min-height: 500px;
+  height: auto;
+  min-width: 420px;
+  width: auto;
+  border: 2px solid #5e5c5c2c;
+  box-shadow: none;
+  border-radius: 10px;
 }
 
-.blue-letter{
-    color: $blue;
+.fundoo{
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.red-letter{
-    color: $red;
+.blue{
+  color: #4285f4;
 }
 
-.yellow-letter{
-    color: $yellow;
+.yellow{
+  color: #fbbc05;
 }
 
-.green-letter{
-    color: $green;
+.red{
+  color:#ea4335;
 }
 
-.sign-in{
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 5%;
+.green{
+  color: #34a853;
+}
+.sub-class-one, .sub-class-two{
+  width: 100%;
+  height: 56px;
+  font-size: 15px;
+  padding: 0px 13px;
+  border-radius: 5px;
 }
 
-.welcome{
-    font-size: 24px;
-    padding-top: 13%;
+::ng-deep .mat-form-field-underline {
+  display: none;
 }
 
-.login-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-    background-color: $white;
-    font-size: 18px;
-    padding-top: 10%;
-    padding-bottom: 5%;
-  }
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 90%;
+}
 
-  .login-full-width {
-    width: 100%;
-  }
+.input-box-one{
+  width: 100%;
+  outline: none;
+}
 
-  .login-full-width button{
-    border-style: none;
-    outline: none;
-    background-color: $white;
-  }
+.input-box{
+  width: 100%;
+  margin-top: 7vh;
+  padding: 8px 0px 0px;
+  outline: none;
+}
 
-  .login-container .mat-form-field + .mat-form-field {
-    margin-left: 8px;
-  }
+.sign-in-btn{
+  background-color: var(--gm-fillbutton-container-color,#1a73e8);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-size: medium;
+  padding: 1.3vh 1.8vw;
+}
 
-  .login-right-align {
-    text-align: right;
-  }
+.signin{
+  margin-top: 35px;
+  font-size: 28px;
+  font-weight: 400;
+}
 
-  input.login-right-align::-webkit-outer-spin-button,
-  input.login-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
+.account{
+  margin-top: 25px;
+  font-size: 16px;
+}
 
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
+.btn-class{
+  margin-top: 35px;
+}
 
-  .login-button{
-      background-color: $purple;
-      border-style: none;
-      outline: none;
-      padding: 2.8% 5.7%;
-      border-radius: 5.3%;
-      display: flex;
-  }
+a:-webkit-any-link {
+  color: var(--gm-fillbutton-container-color,#1a73e8);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 18px;
+}
 
-  .login-button:hover{
-      background-color: $light-purple;
-  }
+.hide-button{
+  outline: none;
+  background-color: #ffffff;
+  border: none;
+}

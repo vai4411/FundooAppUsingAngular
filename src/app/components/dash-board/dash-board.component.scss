@@ -1,8 +1,11 @@
-.dashBoader-main{
-    width: 100vw;
-    height: 100vh;
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
 }
 
-.dashBoard-header{
-    height: 5.5vh;
+mat-sidenav {
+    width: 250px;
+}
+
+main {
+    padding: 10px;
 }

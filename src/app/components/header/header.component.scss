@@ -1,0 +1,89 @@
+.header{
+    background-color: white;
+}
+
+.menu-button{
+    border-radius: 50%;
+    height: 7vh;
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.heading{
+    font-weight: normal;
+    margin-left: 1vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active{
+    color: lightgray;
+}
+
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-toolbar{
+    border-radius: 3px;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+
+.heading{
+    font-size: x-large;
+}
+
+.keep-icon{
+    height: 7vh;
+    padding: 5px;
+}
+
+.input-card{
+    width: 47vw;
+    height: 2.7vh;
+    margin-left: 4vw;
+    transition: none !important;
+    box-shadow: none !important;
+    background-color: #F1F3F4;
+}
+
+.input-card mat-icon{
+    color:#717579;
+}
+
+.input-feild{
+    width: 44.6vw;
+    margin-top: -40px;
+    padding-left: 35px;
+}
+
+.input-feild input{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: lighter;
+    background-color: #F1F3F4;
+}
+
+.user-profile button{
+    border: none;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.user-profile mat-icon{
+    font-size: 35px;
+}

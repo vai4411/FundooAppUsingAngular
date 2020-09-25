@@ -5,7 +5,7 @@ import { HttpService } from '../http_service/http.service';
 @Injectable({
   providedIn: 'root',
 })
-export class FundooService {
+export class UserService {
   baseUrl = environment.apiUrl;
   constructor(private http: HttpService) { }
 
