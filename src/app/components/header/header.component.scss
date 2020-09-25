@@ -15,15 +15,6 @@
     margin-left: 1vw;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover, a:active{
-    color: lightgray;
-}
-
 .navigation-items{
     list-style-type: none;
     padding: 0;
@@ -32,12 +23,6 @@ a:hover, a:active{
 
 mat-toolbar{
     border-radius: 3px;
-}
-
-@media(max-width: 959px){
-    mat-toolbar{
-        border-radius: 0px;
-    }
 }
 
 .heading{
@@ -51,15 +36,19 @@ mat-toolbar{
 
 .input-card{
     width: 47vw;
-    height: 2.7vh;
+    height: 3vh;
     margin-left: 4vw;
     transition: none !important;
     box-shadow: none !important;
     background-color: #F1F3F4;
 }
 
-.input-card mat-icon{
-    color:#717579;
+.input-card button{
+    border: none;
+    padding-bottom: 0.5vh;
+    outline: none;
+    pointer-events: none;
+    background-color: transparent;
 }
 
 .input-feild{
@@ -69,12 +58,16 @@ mat-toolbar{
 }
 
 .input-feild input{
-    width: 100%;
+    width: 95%;
     outline: none;
     border: none;
     font-size: 18px;
     font-weight: lighter;
     background-color: #F1F3F4;
+}
+
+.user-profile{
+    width:  80vw;
 }
 
 .user-profile button{
@@ -86,4 +79,39 @@ mat-toolbar{
 
 .user-profile mat-icon{
     font-size: 35px;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+
+@media(max-width: 700px){
+    .input-card{
+        width: 0%;
+        border-radius: 100%;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .input-feild{
+        display: none;
+    }
+
+    .input-feild input{
+        display: none;
+    }
+
+    .user-profile button{
+        padding-right: none;
+    }
+
+    .input-card button{
+        pointer-events: auto;
+    }
+
+    .input-card button:focus,.input-card button:hover{
+        display: none;
+    }
 }
