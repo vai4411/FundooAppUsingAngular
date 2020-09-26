@@ -46,7 +46,6 @@ export class AddNoteComponent implements OnInit {
     .subscribe(
       response => {
         if(response['status']['success']){
-          console.log("success");
           this.setFlag(false);
           this.addNote.reset();
           this.userService

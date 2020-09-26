@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user_service/user.service';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,11 @@ export class LoginComponent implements OnInit {
 
   hide:boolean = true
   userService:UserService
+  private route:Router
 
-  constructor(userService:UserService) {
+  constructor(route:Router,userService:UserService) {
     this.userService=userService;
+    this.route=route;
   }
 
   Email = new FormControl('', [Validators.email, Validators.required]);
@@ -52,6 +55,9 @@ export class LoginComponent implements OnInit {
     .subscribe(
       response => {
         localStorage.setItem('fundooUserToken',response['id']);
+        if(response['id'] != null){
+          this.route.navigate(['/dashBoard']);
+        }
       },
       error => console.log(error)
     );
