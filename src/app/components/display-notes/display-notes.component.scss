@@ -1,0 +1,78 @@
+.add-note{
+    width: 42vw;
+    height: 3vh;
+    margin-left: 30vw;
+    margin-top: 5vh;
+    border-radius: 2%;
+}
+
+.title-input input{
+    width: 100%;
+    display: none;
+}
+
+.active-input input{
+    display: block;
+    height: 2vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding-bottom: 3%;
+    font-weight: bolder;
+}
+
+.note-input textarea{
+    height: 2vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    resize: none;
+    scroll-margin: none;
+    overflow:hidden;
+    font-weight: bolder;
+}
+
+.note-input textarea:disabled {
+    background: #ffffff;
+  }
+.active-input input:disabled{
+    background: #ffffff;
+}
+
+.icons i, .icons button{
+    display: none;
+}
+
+.close-button{
+    padding: 0.25vh 1.8vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.close-button:hover{
+    color: grey;
+}
+
+.active-add-note{
+    min-height: 12vh;
+    width: 42vw;
+    margin-left: 30vw;
+    margin-top: 5vh;
+    border-radius: 2%;
+    outline: none;
+    textarea{
+        min-height: 8vh;
+    }
+
+    input{
+        display: block;
+    }
+
+    i, button{
+        display: block;
+    }
+}

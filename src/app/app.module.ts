@@ -13,6 +13,7 @@ import { SidenavListComponent } from './components/sidenav-list/sidenav-list.com
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AddNoteComponent } from './components/add-note/add-note.component';
+import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
     HeaderComponent,
     LayoutComponent,
     AddNoteComponent,
+    DisplayNotesComponent,
   ],
   imports: [
     BrowserModule,

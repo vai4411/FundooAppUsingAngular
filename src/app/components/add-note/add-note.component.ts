@@ -10,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class AddNoteComponent implements OnInit {
 
   isDataPresent:boolean = false
+  notes:any[]
 
   addNote = new FormGroup({
     title: new FormControl(''),
@@ -51,7 +52,8 @@ export class AddNoteComponent implements OnInit {
           this.userService
           .getNotes()
           .subscribe(
-            response => console.log(response),
+            response => {this.notes=response['data']['data'];
+            console.log("array:"+this.notes)},
             error => console.log(error)
           );
         }

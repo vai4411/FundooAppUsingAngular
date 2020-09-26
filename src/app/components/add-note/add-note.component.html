@@ -15,3 +15,7 @@
     </div>
     </form>
 </mat-card>
+<br>
+<ng-container *ngFor="let note of notes">
+   <app-display-notes [title]=note.title [description]=note.description></app-display-notes><br>
+</ng-container>

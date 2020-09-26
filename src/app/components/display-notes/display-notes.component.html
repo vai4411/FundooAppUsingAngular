@@ -1,0 +1,14 @@
+<mat-card  class="active-add-note">
+    <div fxLayout="row" class="active-input">
+        <input type="text" placeholder="Title" value="{{title}}" disabled/>
+    </div>
+    <div fxLayout="row" class="note-input">
+        <textarea type="text" placeholder="Take a note..."  value="{{description}}" disabled></textarea>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="icons">
+        <div fxLayout="row">
+        <i class="fas fa-palette" style="font-size: 20px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fas fa-archive" style="font-size: 20px;"></i>
+        </div>
+    </div>
+</mat-card>
