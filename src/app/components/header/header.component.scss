@@ -21,10 +21,6 @@
     margin: 0;
 }
 
-mat-toolbar{
-    border-radius: 3px;
-}
-
 .heading{
     font-size: x-large;
 }
@@ -79,6 +75,16 @@ mat-toolbar{
 
 .user-profile mat-icon{
     font-size: 35px;
+    align-content: center;
+}
+
+.menu{
+    height: 30vh;
+    width: 10vw;
+}
+
+.user-icon mat-icon{
+    font-size: 70px;
 }
 
 @media(max-width: 959px){

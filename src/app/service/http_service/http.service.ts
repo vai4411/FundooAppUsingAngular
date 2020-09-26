@@ -21,4 +21,10 @@ export class HttpService {
     return this.http.get(url,{
       headers: {'Authorization':localStorage.getItem('fundooUserToken')}});
   }
+
+  postLogoutServuce(url:string){
+    let data={}
+    return this.http.post(url,data,{
+      headers: {'Authorization':localStorage.getItem('fundooUserToken')}});
+  }
 }

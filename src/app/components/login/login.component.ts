@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
   Email = new FormControl('', [Validators.email, Validators.required]);
   Password = new FormControl('', [
     Validators.minLength(8),
-    Validators.maxLength(15),
     Validators.required,
   ]);
 

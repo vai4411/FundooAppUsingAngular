@@ -23,4 +23,9 @@ export class UserService {
     return this.http
     .getNotesService(this.baseUrl + 'notes/getNotesList');
   }
+
+  logout() {
+    return this.http
+    .postLogoutServuce(this.baseUrl + 'user/logout');
+  }
 }

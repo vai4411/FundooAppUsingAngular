@@ -34,8 +34,14 @@ fxLayout="row">
             <mat-icon>account_circle</mat-icon>
         </button>
         <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+            <div class="menu" >
+                <div fxLayout="colume" fxLayoutAlign="center" class="user-icon">
+                    <mat-icon>account_circle</mat-icon>
+                </div>
+                <div fxLayout="colume" fxLayoutAlign="center">
+                    <button mat-raised-button (click)="logout()">Logout</button>
+                </div>
+            </div>
         </mat-menu>
     </div>
   </mat-toolbar>
