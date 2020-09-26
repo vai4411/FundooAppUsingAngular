@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user_service/user.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -11,41 +11,42 @@ import { Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   hide:boolean = true
-  loginForm = new FormGroup({
-    email: new FormControl('',[
-      Validators.required,
-      Validators.email,
-    ]),
-    password: new FormControl('',[
-      Validators.required,
-      Validators.minLength(8),
-    ])
-  })
   userService:UserService
 
   constructor(userService:UserService) {
     this.userService=userService;
   }
 
+  Email = new FormControl('', [Validators.email, Validators.required]);
+  Password = new FormControl('', [
+    Validators.minLength(8),
+    Validators.maxLength(15),
+    Validators.required,
+  ]);
+
+  getEmailErrorMessage() {
+    return this.Email.hasError('required')
+      ? 'Email is Required'
+      : 'please enter valid email';
+  }
+
+  getPasswordErrorMessage() {
+    return this.Password.hasError('required')
+      ? 'Password is Required '
+      : 'Password should be minimum of 8 characters';
+  }
   ngOnInit(): void {
-  }
-
-  getErrorMessageForEmail(){
-    return this.loginForm.value["email"].hasError('required') ? 'Email feild cannot be blank' :
-    this.loginForm.value["email"].hasError('email') ? 'Not a valid email' : '';
-  }
-
-  getErrorMessageForPassword(){
-    return this.loginForm.value["password"].hasError('required') ? 'Password feild cannot be blank' :
-    this.loginForm.value["password"].hasError('password') ? 'Not a valid password' : '';
   }
 
   login(){
     let data={
-      email: this.loginForm.value["email"],
-      password: this.loginForm.value["password"],
+      email: this.Email.value,
+      password: this.Password.value,
       cartId: ""
     }
+    if(!(this.Email.hasError('required')) && !(this.Email.hasError('email'))
+      && !(this.Password.hasError('required')) && !(this.Password.value.length < 8))
+    {
     this.userService
     .login(data)
     .subscribe(
@@ -55,4 +56,5 @@ export class LoginComponent implements OnInit {
       error => console.log(error)
     );
   }
+}
 }

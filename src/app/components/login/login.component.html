@@ -12,29 +12,64 @@
             <div class="signin">Sign in</div>
             <div class="account">Use Your Fundoo Account</div>
         </div>
-        <form [formGroup]="loginForm" class="login-form" (ngSubmit)="login()">
-        <div class="input-box" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap=35px
+        <form class="login-form" (ngSubmit)="login()">
+        <div
+        class="input-box"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap=35px
         fxLayoutAlign.xs="center center">
-            <div fxLayoutAlign="center center" fxLayoutAlign.xs="space-around center" class="sub-class-one">
-                <mat-form-field appearance="outline" fxLayoutAlign.xs="center center">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="Enter your email address" class="input-box-one"
-                    formControlName="email" required>
-                </mat-form-field>
+            <div
+            fxLayoutAlign="center center"
+            fxLayoutAlign.xs="space-around center"
+            class="sub-class-one">
+            <mat-form-field
+                appearance="outline"
+                fxLayoutAlign.xs="center center">
+                <mat-label>Email</mat-label>
+                <input
+                    matInput
+                    [formControl]="Email"
+                    placeholder="abc@gmail.com "
+                    autocomplete="off"
+                    class="input-box-one"
+                />
+                  <mat-error *ngIf="Email.invalid">{{
+                    getEmailErrorMessage()
+                  }}</mat-error>
+                  </mat-form-field>
             </div>
-            <div fxLayoutAlign="center center" fxLayoutAlign.xs="center center" class="sub-class-two">
-                <mat-form-field appearance="outline" fxLayoutAlign.xs="center center">
+            <div
+            fxLayoutAlign="center center"
+            fxLayoutAlign.xs="center center"
+            class="sub-class-two">
+                <mat-form-field
+                appearance="outline"
+                fxLayoutAlign.xs="center center">
                     <mat-label>Password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'"
-                    placeholder="Enter your password" formControlName="password" required>
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                     [attr.aria-pressed]="hide" class="hide-button">
+                    <input
+                    matInput [type]="hide ? 'password' : 'text'"
+                    placeholder="Enter your password"
+                    [formControl]="Password" required>
+                    <button
+                    mat-icon-button matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                    class="hide-button">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
+                    <mat-error *ngIf="Email.invalid">{{
+                        getPasswordErrorMessage()
+                      }}</mat-error>
                 </mat-form-field>
             </div>
-            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="center center"
-             fxLayoutGap=135px class="sub-class-three">
+            <div
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            fxLayoutAlign.xs="center center"
+            fxLayoutGap=135px
+            class="sub-class-three">
                 <div class="create-link">
                     <a href="#">Create Account</a>
                 </div>
