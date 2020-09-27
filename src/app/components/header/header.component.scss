@@ -3,11 +3,13 @@
 }
 
 .menu-button{
-    border-radius: 50%;
+    border-radius: 100%;
     height: 7vh;
+    width: 7vh;
     border-style: none;
     outline: none;
     cursor: pointer;
+   margin-left: -9px;
 }
 
 .heading{

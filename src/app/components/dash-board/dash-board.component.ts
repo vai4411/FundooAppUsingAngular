@@ -7,8 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class DashBoardComponent implements OnInit {
 
-  @Output() sidenavClose = new EventEmitter();
-  @Output() sidenavToggle = new EventEmitter();
+  isDrawerOpen:boolean = true;
 
   constructor() { }
 
@@ -16,11 +15,9 @@ export class DashBoardComponent implements OnInit {
   }
 
   public onSidenavClose = () => {
-    this.sidenavClose.emit();
+    this.isDrawerOpen=!this.isDrawerOpen;
   }
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
-  }
+
 
 }

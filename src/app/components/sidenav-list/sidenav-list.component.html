@@ -1,19 +1,13 @@
 <mat-nav-list>
-    <a
-    mat-list-item routerLink="/home"
-    (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon> <span class="nav-caption">Notes</span>
+    <a mat-list-item [routerLink]="['addNotes']" routerLinkActive="active-list-item">
+        <mat-icon >lightbulb</mat-icon> <span class="nav-caption">Notes</span>
     </a>
-    <a
-    mat-list-item routerLink="#"
-    (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon>
+    <a mat-list-item routerLink="#" routerLinkActive="active-list-item">
+        <mat-icon >archive</mat-icon>
         <span class="nav-caption">Archive</span>
     </a>
-    <a
-    mat-list-item routerLink="#"
-    (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon>
+    <a mat-list-item routerLink="#" routerLinkActive="active-list-item">
+        <mat-icon>delete</mat-icon>
         <span class="nav-caption">Trash</span>
     </a>
 </mat-nav-list>

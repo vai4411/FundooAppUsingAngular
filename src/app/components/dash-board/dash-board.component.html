@@ -1,13 +1,10 @@
 <app-layout>
-    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <app-header (sidenavToggle)="onSidenavClose()"></app-header>
     <mat-sidenav-container>
-      <mat-sidenav
-      #sidenav role="navigation"
-      opened="true"
-      disableClose="true"
-      mode="side">
-        <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+      <mat-sidenav #sidenav role="navigation" opened="true" disableClose="true" mode="side"
+      [ngClass]="isDrawerOpen ? 'close':'open'">
+        <app-sidenav-list (sidenavToggle)="onSidenavClose()"></app-sidenav-list>
       </mat-sidenav>
-  <app-add-note></app-add-note>
+  <router-outlet></router-outlet>
   </mat-sidenav-container>
   </app-layout>

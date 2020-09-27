@@ -9,3 +9,15 @@ mat-sidenav {
 main {
     padding: 10px;
 }
+
+.open {
+ width:none;
+}
+
+.close{
+width:60px;
+}
+
+.mat-list-item.active{
+    color: red;
+  }
