@@ -14,7 +14,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AddNoteComponent } from './components/add-note/add-note.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
-import { NotesContainerComponent } from './components/notes-container/notes-container.component';
 import { ManageNotesComponent } from './components/manage-notes/manage-notes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
@@ -28,7 +27,6 @@ import { TrashComponent } from './components/trash/trash.component';
     LayoutComponent,
     AddNoteComponent,
     DisplayNotesComponent,
-    NotesContainerComponent,
     ManageNotesComponent,
     ArchiveComponent,
     TrashComponent,

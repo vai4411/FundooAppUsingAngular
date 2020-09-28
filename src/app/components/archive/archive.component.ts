@@ -24,5 +24,4 @@ export class ArchiveComponent implements OnInit {
       error => console.log(error)
     );
   }
-
 }

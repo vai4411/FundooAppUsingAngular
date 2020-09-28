@@ -38,4 +38,14 @@ export class UserService {
     return this.http
     .postLogoutServuce(this.baseUrl + 'user/logout');
   }
+
+  archiveNote(data){
+    return this.http
+    .postNoteService(data,this.baseUrl + 'notes/archiveNotes');
+  }
+
+  deleteNote(data){
+    return this.http
+    .postNoteService(data,this.baseUrl + 'notes/trashNotes');
+  }
 }

@@ -25,6 +25,7 @@ export class AddNoteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
   setFlag(value:boolean){

@@ -1,7 +1,7 @@
 <div style="margin-left: 20%;margin-right: 20%; margin-top: 2%;">
     <mat-grid-list cols="3" rowHeight="2:1" [gutterSize]="'20px'">
         <ng-container *ngFor="let note of notes">
-            <mat-grid-tile>
+            <mat-grid-tile *ngIf="(!note.isArchived && !note.isDeleted) || (note.isDeleted) || (note.isArchived && !note.isDeleted)">
                 <mat-card  class="active-add-note" style="width: 100%;">
                     <div
                     fxLayout="row"
@@ -32,10 +32,17 @@
                     style="font-size: 20px;">
                     </i>
                     &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="passNoteId(note.id,'archieve')">
                     <i
                     class="fas fa-archive"
                     style="font-size: 20px;">
-                </i>
+                </i></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span (click)="passNoteId(note.id,'trash')">
+                    <i
+                    class="fas fa-trash"
+                    style="font-size: 20px;">
+                </i></span>
                     </div>
                 </div>
             </mat-card>
