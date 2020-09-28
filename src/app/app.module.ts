@@ -16,6 +16,7 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { NotesContainerComponent } from './components/notes-container/notes-container.component';
 import { ManageNotesComponent } from './components/manage-notes/manage-notes.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ManageNotesComponent } from './components/manage-notes/manage-notes.com
     DisplayNotesComponent,
     NotesContainerComponent,
     ManageNotesComponent,
+    ArchiveComponent,
   ],
   imports: [
     BrowserModule,
