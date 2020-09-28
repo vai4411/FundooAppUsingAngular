@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user_service/user.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-note',
@@ -10,7 +11,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class AddNoteComponent implements OnInit {
 
   isDataPresent:boolean = false
-  notes:any[]
 
   addNote = new FormGroup({
     title: new FormControl(''),
@@ -18,8 +18,10 @@ export class AddNoteComponent implements OnInit {
   })
 
   userService:UserService
-  constructor(userService:UserService) {
+  router:Router
+  constructor(userService:UserService,router:Router) {
     this.userService=userService;
+    this.router=router;
   }
 
   ngOnInit(): void {
@@ -48,13 +50,6 @@ export class AddNoteComponent implements OnInit {
         if(response['status']['success']){
           this.setFlag(false);
           this.addNote.reset();
-          this.userService
-          .getNotes()
-          .subscribe(
-            response => {this.notes=response['data']['data'];
-            console.log("array:"+this.notes)},
-            error => console.log(error)
-          );
         }
       },
       error => console.log(error)
