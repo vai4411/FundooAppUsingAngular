@@ -17,7 +17,7 @@ import { DisplayNotesComponent } from './components/display-notes/display-notes.
 import { NotesContainerComponent } from './components/notes-container/notes-container.component';
 import { ManageNotesComponent } from './components/manage-notes/manage-notes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
-import { TranshComponent } from './components/transh/transh.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { TranshComponent } from './components/transh/transh.component';
     NotesContainerComponent,
     ManageNotesComponent,
     ArchiveComponent,
-    TranshComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,
