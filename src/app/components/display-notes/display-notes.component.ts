@@ -9,8 +9,7 @@ export class DisplayNotesComponent implements OnInit {
 
   constructor() { }
 
-  @Input() title: string;
-  @Input() description: string
+  @Input() notes: any[]
 
   ngOnInit(): void {
   }
