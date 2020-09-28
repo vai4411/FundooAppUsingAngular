@@ -24,6 +24,11 @@ export class UserService {
     .getNotesService(this.baseUrl + 'notes/getNotesList');
   }
 
+  getArchiveNotes() {
+    return this.http
+    .getNotesService(this.baseUrl + 'notes/getArchiveNotesList');
+  }
+
   logout() {
     return this.http
     .postLogoutServuce(this.baseUrl + 'user/logout');
