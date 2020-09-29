@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
     let data={}
     this.userService.logout(data).subscribe(
       response => {
+        localStorage.removeItem('fundooUserToken');
         this.route.navigate(['/login']);
       },
       error => console.log(error)

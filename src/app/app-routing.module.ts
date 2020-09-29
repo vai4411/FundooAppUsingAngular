@@ -6,17 +6,20 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
 import { ManageNotesComponent } from './components/manage-notes/manage-notes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { AuthGuardService } from './service/auth-gurd/auth-gurd.service'
 
 const routes: Routes = [
   { path: '',   redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component:LoginComponent},
   { path: 'dashBoard', component:DashBoardComponent,
   children:[
-    { path: 'manage_notes', component: ManageNotesComponent},
-    { path: 'archive', component: ArchiveComponent},
-    { path: 'trash', component: TrashComponent}
-  ]
-  }]
+    { path: 'manage_notes', component: ManageNotesComponent,canActivate:[AuthGuardService]},
+    { path: 'archive', component: ArchiveComponent,canActivate:[AuthGuardService]},
+    { path: 'trash', component: TrashComponent,canActivate:[AuthGuardService]}
+  ],canActivate:[AuthGuardService]
+  },
+  {  path: '**', redirectTo: ''}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

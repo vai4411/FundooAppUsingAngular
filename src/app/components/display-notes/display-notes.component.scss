@@ -58,4 +58,16 @@
         display: block;
         color: lightgray;
     }
+
+    i:hover{
+        color: gray;
+    }
+
+    app-archive-button:hover{
+        color: gray;
+    }
+
+    app-trash-button:hover{
+        color: gray;
+    }
 }
