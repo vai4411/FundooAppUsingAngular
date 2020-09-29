@@ -28,37 +28,4 @@ export class ManageNotesComponent implements OnInit {
       error => console.log(error)
     );
   }
-
-    archiveOrDeleteNote(noteId){
-    let data;
-    if(noteId['type']==='archieve')
-    {
-      data={
-        isArchived: true,
-        noteIdList: [noteId['id']]
-      }
-      this.userService
-      .archiveNote(data)
-      .subscribe(
-        response => {console.log(response);
-          this.getNotes();
-        },
-        error => console.log(error)
-      )
-    }
-    else{
-      data={
-        isDeleted: true,
-        noteIdList: [noteId['id']]
-      }
-      this.userService
-      .deleteNote(data)
-      .subscribe(
-        response => {console.log(response);
-          this.getNotes();
-        },
-        error => console.log(error)
-      )
-    }
-  }
 }

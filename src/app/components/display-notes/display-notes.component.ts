@@ -12,13 +12,14 @@ export class DisplayNotesComponent implements OnInit {
   @Input() notes: any[]
   @Input() type: string
   @Output() noteId = new EventEmitter<any>();
+  data:any
 
   ngOnInit(): void {
   }
 
   passNoteId(id,type){
-    let data={'id':id,'type':type};
-    this.noteId.emit(data);
+    this.data={'id':id,'type':type};
+    this.noteId.emit(this.data);
   }
 
   evaluateType(note){

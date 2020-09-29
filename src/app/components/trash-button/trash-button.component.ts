@@ -1,12 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from 'src/app/service/user_service/user.service';
 
 @Component({
-  selector: 'app-archive-button',
-  templateUrl: './archive-button.component.html',
-  styleUrls: ['./archive-button.component.scss']
+  selector: 'app-trash-button',
+  templateUrl: './trash-button.component.html',
+  styleUrls: ['./trash-button.component.scss']
 })
-export class ArchiveButtonComponent implements OnInit {
+export class TrashButtonComponent implements OnInit {
 
   userService:UserService
   constructor(userService:UserService) {
@@ -20,11 +20,11 @@ export class ArchiveButtonComponent implements OnInit {
 
   passNoteId(){
     let data={
-      isArchived: true,
+      isDeleted: true,
       noteIdList: [this.noteId]
     }
     this.userService
-    .archiveNote(data)
+    .deleteNote(data)
     .subscribe(
       response => {console.log(response);
       },

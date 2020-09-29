@@ -18,6 +18,7 @@ import { ManageNotesComponent } from './components/manage-notes/manage-notes.com
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveButtonComponent } from './components/archive-button/archive-button.component';
+import { TrashButtonComponent } from './components/trash-button/trash-button.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ArchiveButtonComponent } from './components/archive-button/archive-butt
     ArchiveComponent,
     TrashComponent,
     ArchiveButtonComponent,
+    TrashButtonComponent,
   ],
   imports: [
     BrowserModule,
