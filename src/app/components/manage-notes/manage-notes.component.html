@@ -3,5 +3,5 @@
 </div>
 <br>
 <div layout="row" layout-align="center center">
-    <app-display-notes [notes]=notes (noteId)="archiveOrDeleteNote($event)"></app-display-notes>
+    <app-display-notes [notes]=notes [type]=type (noteId)="archiveOrDeleteNote($event)"></app-display-notes>
 </div>

@@ -35,6 +35,12 @@
 
 .icons i, .icons button{
     display: none;
+    color: lightgray;
+}
+
+.icons i:hover, .icons button:hover{
+    color: gray;
+    display: none;
 }
 
 .close-button{
@@ -54,6 +60,7 @@
     width: 50vw;
     border-radius: 2%;
     outline: none;
+    border-radius: 4%;
     textarea{
         min-height: 8vh;
     }
@@ -61,7 +68,11 @@
     input{
         display: block;
     }
+}
 
+.active-add-note:hover{
+    margin: 0.1em;
+    padding: 1.5em;
     i, button{
         display: block;
     }

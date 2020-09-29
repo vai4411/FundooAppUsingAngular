@@ -10,6 +10,7 @@ export class TrashComponent implements OnInit {
 
   userService:UserService
   notes:any[]
+  type:string='trash'
 
   constructor(userService:UserService) {
     this.userService = userService;

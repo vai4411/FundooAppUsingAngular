@@ -34,9 +34,9 @@ export class UserService {
     .getNotesService(this.baseUrl + 'notes/getTrashNotesList');
   }
 
-  logout() {
+  logout(data) {
     return this.http
-    .postLogoutServuce(this.baseUrl + 'user/logout');
+    .postNoteService(data,this.baseUrl + 'user/logout');
   }
 
   archiveNote(data){

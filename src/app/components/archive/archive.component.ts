@@ -10,6 +10,7 @@ export class ArchiveComponent implements OnInit {
 
   private userService:UserService
   public notes: any[]
+  type:string='archive'
 
   constructor(userService:UserService) {
     this.userService = userService;

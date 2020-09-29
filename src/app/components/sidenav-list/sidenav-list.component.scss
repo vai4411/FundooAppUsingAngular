@@ -4,8 +4,8 @@ a{
     padding: 10px;
 }
 
-a:hover, a:active{
-    color: grey;
+a:hover, a:focus{
+    background-color: #FEEFC3;
 }
 
 .nav-caption{
@@ -15,5 +15,6 @@ a:hover, a:active{
 }
 
 .active-list-item {
-    color: #3F51B5 !important; /* Note: You could also use a custom theme */
+    color: lightgray !important;
+    background-color: #FEEFC3;
   }

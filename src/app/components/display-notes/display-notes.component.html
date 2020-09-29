@@ -1,8 +1,14 @@
-<div style="margin-left: 20%;margin-right: 20%; margin-top: 2%;">
-    <mat-grid-list cols="3" rowHeight="2:1" [gutterSize]="'20px'">
+<!-- <div style="margin-left: 20%;margin-right: 20%; margin-top: 2%;">
+    <mat-grid-list cols="3" rowHeight="1.5:1" [gutterSize]="'20px'">
         <ng-container *ngFor="let note of notes">
-            <mat-grid-tile *ngIf="(!note.isArchived && !note.isDeleted) || (note.isDeleted) || (note.isArchived && !note.isDeleted)">
-                <mat-card  class="active-add-note" style="width: 100%;">
+            <mat-grid-tile *ngIf="evaluateType(note)">
+                <mat-card  class="active-add-note" style="width: 100%;"> -->
+                    <div  fxLayout="row wrap" fxLayoutAlign = "space-between"
+                    style="margin-top: 2%;
+                    ">
+                        <div *ngFor="let note of notes">
+                            <div class="active-add-note" *ngIf="evaluateType(note)"
+                            style="min-height: 450px; width: 250px;">
                     <div
                     fxLayout="row"
                     class="active-input">
@@ -45,8 +51,11 @@
                 </i></span>
                     </div>
                 </div>
-            </mat-card>
+                </div>
+                </div>
+                    </div>
+            <!-- </mat-card>
         </mat-grid-tile>
     </ng-container>
 </mat-grid-list>
-</div>
+</div> -->

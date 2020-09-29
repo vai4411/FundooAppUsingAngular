@@ -13,6 +13,7 @@ export class ManageNotesComponent implements OnInit {
     this.userService=userService;
   }
   notes:any[]
+  type:string='active'
 
   ngOnInit(): void {
     this.getNotes();
@@ -60,5 +61,4 @@ export class ManageNotesComponent implements OnInit {
       )
     }
   }
-
 }
