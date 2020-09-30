@@ -20,6 +20,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveButtonComponent } from './components/archive-button/archive-button.component';
 import { TrashButtonComponent } from './components/trash-button/trash-button.component';
 import { NoteDialogComponent } from './components/note-dialog/note-dialog.component';
+import { ColorPanelComponent } from './components/color-panel/color-panel.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NoteDialogComponent } from './components/note-dialog/note-dialog.compon
     ArchiveButtonComponent,
     TrashButtonComponent,
     NoteDialogComponent,
+    ColorPanelComponent,
   ],
   entryComponents: [NoteDialogComponent],
   imports: [
