@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { DataService } from 'src/app/service/data_service/data.service';
 import { UserService } from 'src/app/service/user_service/user.service';
 
 @Component({
@@ -8,10 +9,16 @@ import { UserService } from 'src/app/service/user_service/user.service';
 })
 export class ManageNotesComponent implements OnInit {
 
-  userService:UserService
-  constructor(userService:UserService) {
+  userService:UserService;
+  dataService:DataService;
+
+  constructor(userService:UserService,dataService:DataService) {
     this.userService=userService;
+    dataService.getMessage().subscribe(message=>{
+      this.getNotes();
+    });
   }
+
   notes:any[]
   type:string='active'
 

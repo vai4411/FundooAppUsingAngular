@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter,ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DataService } from 'src/app/service/data_service/data.service';
 import { UserService } from 'src/app/service/user_service/user.service';
 import { NoteDialogComponent } from '../note-dialog/note-dialog.component';
 
@@ -11,9 +12,11 @@ import { NoteDialogComponent } from '../note-dialog/note-dialog.component';
 export class DisplayNotesComponent implements OnInit {
 
   userService:UserService
+  dataService:DataService
 
-  constructor(public dialog: MatDialog,userService:UserService) {
+  constructor(public dialog: MatDialog,userService:UserService,dataService:DataService) {
     this.userService=userService;
+    this.dataService=dataService;
   }
 
   @Input() notes: any[]
@@ -55,7 +58,10 @@ export class DisplayNotesComponent implements OnInit {
     this.userService
     .updateNote(result)
     .subscribe(
-      response => {console.log(response);
+      response => {
+        console.log("inside send");
+        this.dataService
+        .sendMessage("hello");
      },
       error => console.log(error)
     );

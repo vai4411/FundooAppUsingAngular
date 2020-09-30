@@ -10,15 +10,15 @@ export class DataService {
 
   constructor() { }
 
-  sendStatus(message: string) {
+  sendMessage(message: string) {
     this.subject.next({ text: message });
-  }
+}
 
-  clearStatus() {
-      this.subject.next();
-  }
+clearMessages() {
+    this.subject.next();
+}
 
-  getStatus(): Observable<any> {
-      return this.subject.asObservable();
-  }
+getMessage(): Observable<any> {
+    return this.subject.asObservable();
+}
 }
