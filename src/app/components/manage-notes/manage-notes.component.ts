@@ -23,8 +23,7 @@ export class ManageNotesComponent implements OnInit {
     this.userService
     .getNotes()
     .subscribe(
-      response => {this.notes=response['data']['data'];
-      console.log("array:"+this.notes)},
+      response => {this.notes=response['data']['data']},
       error => console.log(error)
     );
   }

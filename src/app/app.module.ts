@@ -19,6 +19,7 @@ import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveButtonComponent } from './components/archive-button/archive-button.component';
 import { TrashButtonComponent } from './components/trash-button/trash-button.component';
+import { NoteDialogComponent } from './components/note-dialog/note-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { TrashButtonComponent } from './components/trash-button/trash-button.com
     TrashComponent,
     ArchiveButtonComponent,
     TrashButtonComponent,
+    NoteDialogComponent,
   ],
+  entryComponents: [NoteDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

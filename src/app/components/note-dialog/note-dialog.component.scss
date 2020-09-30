@@ -1,0 +1,56 @@
+.title-input input{
+    width: 100%;
+    display: none;
+}
+
+.active-input input{
+    height: 2vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.note-input textarea{
+    height: 2vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    resize: none;
+    scroll-margin: none;
+    overflow:hidden;
+    font-weight: bolder;
+    padding: none;
+}
+
+.close-button{
+    padding: 0.25vh 1.8vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.close-button:hover{
+    color: grey;
+}
+
+.active-add-note{
+    min-height: 12vh;
+    width: 42vw;
+    border-radius: 2%;
+    outline: none;
+    textarea{
+        min-height: 8vh;
+    }
+
+    input{
+        display: block;
+    }
+
+    i, button{
+        display: block;
+    }
+}
