@@ -1,0 +1,75 @@
+@mixin color {
+    width:25px;
+    height:25px;
+    background-color:white;
+    margin-left:10px;
+    border-radius: 50%;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+}
+
+@mixin last-color {
+    @include color();
+    margin-right: 10px;
+}
+
+.pallet-division{
+    .color-one{
+        @include color();
+    }
+
+    .color-two{
+        @include color();
+        background-color: #F28B82;
+    }
+
+    .color-three{
+        @include color();
+        background-color: #FBBC04;
+    }
+
+    .color-four{
+        @include last-color();
+        background-color: #FFF475;
+    }
+
+    .color-five{
+        @include color();
+        background-color: #CCFF90;
+    }
+
+    .color-six{
+        @include color();
+        background-color: #A7FFEB;
+    }
+
+    .color-seven{
+        @include color();
+        background-color: #CBF0F8;
+    }
+
+    .color-eight{
+        @include last-color();
+        background-color: #AECBFA;
+    }
+
+    .color-nine{
+        @include color();
+        background-color: #D7AEFB;
+    }
+
+    .color-ten{
+        @include color();
+        background-color: #FDCFE8;
+    }
+
+    .color-eleven{
+        @include color();
+        background-color: #E6C9A8;
+    }
+
+    .color-twelve{
+        @include last-color();
+        background-color: #E8EAED;
+    }
+}

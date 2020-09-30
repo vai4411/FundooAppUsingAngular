@@ -14,3 +14,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding:0px!important;
     color: black;
 }
+
+.mat-menu-content:not(:empty) {
+    padding-top: 4px;
+    padding-bottom: 8px;
+}

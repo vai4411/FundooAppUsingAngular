@@ -4,7 +4,6 @@
 }
 
 .display-box{
-    background-color: white;
     margin-top: 1%;
     min-height: 100px;
     width: 250px;
@@ -15,14 +14,12 @@
         margin-left: 5%;
         width: 80%;
         margin-top: 5%;
-        background-color: white;
         border: none;
     }
 
     textarea{
         margin-left: 5%;
         width: 80%;
-        background-color: white;
         border: none;
         resize: none;
     }
@@ -40,34 +37,48 @@
     app-trash-button{
         display: none;
     }
+
+    app-color-panel{
+        display: none;
+    }
 }
 
-.display-box:hover{
+.display-box:hover, .display-box:focus{
+    outline: none;
     box-shadow: 0 0 5px -2px #444444;
     i{
         display: block;
-        color: lightgray;
+        color: gray;
     }
 
     app-archive-button{
         display: block;
-        color: lightgray;
+        color: gray;
     }
 
     app-trash-button{
         display: block;
-        color: lightgray;
+        color: gray;
+    }
+
+    app-color-panel{
+        display: block;
+        color: gray;
     }
 
     i:hover{
-        color: gray;
+        color: black;
     }
 
     app-archive-button:hover{
-        color: gray;
+        color: black;
     }
 
     app-trash-button:hover{
-        color: gray;
+        color: black;
+    }
+
+    app-color-panel:hover, app-color-panel:focus{
+        color: black;
     }
 }

@@ -53,4 +53,9 @@ export class UserService {
     return this.http
     .postNoteService(data,this.baseUrl + 'notes/updateNotes');
   }
+
+  setColor(data) {
+    return this.http
+    .postNoteService(data,this.baseUrl + 'notes/changesColorNotes');
+  }
 }

@@ -1,1 +1,23 @@
-<p>color-panel works!</p>
+<span [matMenuTriggerFor]="aboveMenu" class="pallet-button">
+    <i class="fas fa-palette"></i>
+</span>
+<mat-menu #aboveMenu="matMenu" yPosition="above" fxLayout="row">
+    <div fxLayout="colume" class="pallet-division" fxLayoutAlign="space-around center">
+        <div class="color-one" (click)="getColor('#ffffff')"></div>
+        <div class="color-two" (click)="getColor('#F28B82')"></div>
+        <div class="color-three" (click)="getColor('#FBBC04')"></div>
+        <div class="color-four" (click)="getColor('#FFF475')"></div>
+    </div>
+    <div fxLayout="colume" class="pallet-division" fxLayoutAlign="space-around center">
+        <div class="color-five" (click)="getColor('#CCFF90')"></div>
+        <div class="color-six" (click)="getColor('#A7FFEB')"></div>
+        <div class="color-seven" (click)="getColor('#CBF0F8')"></div>
+        <div class="color-eight" (click)="getColor('#AECBFA')"></div>
+    </div>
+    <div fxLayout="colume" class="pallet-division" fxLayoutAlign="space-around center">
+        <div class="color-nine" (click)="getColor('#D7AEFB')"></div>
+        <div class="color-ten" (click)="getColor('#FDCFE8')"></div>
+        <div class="color-eleven" (click)="getColor('#E6C9A8')"></div>
+        <div class="color-twelve" (click)="getColor('#E8EAED')"></div>
+    </div>
+</mat-menu>
