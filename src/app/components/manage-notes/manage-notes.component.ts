@@ -10,7 +10,6 @@ import { UserService } from 'src/app/service/user_service/user.service';
 export class ManageNotesComponent implements OnInit {
 
   userService:UserService;
-  dataService:DataService;
 
   constructor(userService:UserService,dataService:DataService) {
     this.userService=userService;

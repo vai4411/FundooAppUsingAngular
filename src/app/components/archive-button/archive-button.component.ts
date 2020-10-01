@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/service/data_service/data.service';
 import { UserService } from 'src/app/service/user_service/user.service';
 
 @Component({
@@ -8,9 +9,12 @@ import { UserService } from 'src/app/service/user_service/user.service';
 })
 export class ArchiveButtonComponent implements OnInit {
 
-  userService:UserService
-  constructor(userService:UserService) {
+  userService:UserService;
+  dataService:DataService;
+
+  constructor(userService:UserService,dataService:DataService) {
     this.userService = userService;
+    this.dataService = dataService;
    }
 
   @Input() noteId;
@@ -26,7 +30,9 @@ export class ArchiveButtonComponent implements OnInit {
     this.userService
     .archiveNote(data)
     .subscribe(
-      response => {console.log(response);
+      response => {
+        this.dataService
+        .sendMessage("data");
       },
       error => console.log(error)
     )

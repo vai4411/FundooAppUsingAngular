@@ -1,10 +1,10 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around" class="main-container">
     <ng-container *ngFor="let note of notes">
-        <div class="display-box" *ngIf="evaluateType(note)" tabindex="1" style="background-color: {{note.color}}">
+        <div class="display-box" *ngIf="evaluateType(note)" tabindex="1" [ngStyle]="{'background-color': note.color}">
 
             <div (click)="openDialog(note)">
-            <input type="text" placeholder="Title" value="{{note.title}}" disabled style="background-color: {{note.color}}"/>
-            <textarea type="text" placeholder="Take a note..." value="{{note.description}}" disabled style="background-color: {{note.color}}"></textarea>
+            <input type="text" placeholder="Title" value="{{note.title}}" disabled [ngStyle]="{'background-color': note.color}"/>
+            <textarea type="text" placeholder="Take a note..." value="{{note.description}}" disabled [ngStyle]="{'background-color': note.color}"></textarea>
             </div>
             <div class="buttons" fxLayout="row" fxLayoutAlign="space-around">
                 <app-color-panel [noteId]="note.id"></app-color-panel>

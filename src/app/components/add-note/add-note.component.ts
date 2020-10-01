@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/user_service/user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/service/data_service/data.service';
 
 @Component({
   selector: 'app-add-note',
@@ -17,11 +18,14 @@ export class AddNoteComponent implements OnInit {
     note: new FormControl('')
   })
 
-  userService:UserService
-  router:Router
-  constructor(userService:UserService,router:Router) {
+  userService:UserService;
+  router:Router;
+  dataService:DataService;
+
+  constructor(userService:UserService,router:Router,dataService:DataService) {
     this.userService=userService;
     this.router=router;
+    this.dataService = dataService;
   }
 
   ngOnInit(): void {
@@ -51,6 +55,8 @@ export class AddNoteComponent implements OnInit {
         if(response['status']['success']){
           this.setFlag(false);
           this.addNote.reset();
+          this.dataService
+          .sendMessage("data");
         }
       },
       error => console.log(error)

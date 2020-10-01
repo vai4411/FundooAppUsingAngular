@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/service/data_service/data.service';
 import { UserService } from '../../service/user_service/user.service';
 
 @Component({
@@ -12,11 +13,18 @@ export class ArchiveComponent implements OnInit {
   public notes: any[]
   type:string='archive'
 
-  constructor(userService:UserService) {
+  constructor(userService:UserService,dataService:DataService) {
     this.userService = userService;
+    dataService.getMessage().subscribe(message=>{
+      this.getArchiveNotes();
+    });
    }
 
   ngOnInit(): void {
+    this.getArchiveNotes();
+  }
+
+  getArchiveNotes(){
     this.userService
     .getArchiveNotes()
     .subscribe(

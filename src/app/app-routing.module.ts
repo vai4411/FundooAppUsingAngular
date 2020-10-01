@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'dashBoard', component:DashBoardComponent,
   children:[
+    { path: '',   redirectTo: '/dashBoard/manage_notes', pathMatch: 'full'},
     { path: 'manage_notes', component: ManageNotesComponent,canActivate:[AuthGuardService]},
     { path: 'archive', component: ArchiveComponent,canActivate:[AuthGuardService]},
     { path: 'trash', component: TrashComponent,canActivate:[AuthGuardService]}
