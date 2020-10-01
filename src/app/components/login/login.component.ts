@@ -54,6 +54,8 @@ export class LoginComponent implements OnInit {
     .subscribe(
       response => {
         localStorage.setItem('fundooUserToken',response['id']);
+        localStorage.setItem('email',response['email']);
+        localStorage.setItem('user',response['firstName']+" "+response['lastName']);
         if(response['id'] != null){
           this.route.navigate(['/dashBoard']);
         }

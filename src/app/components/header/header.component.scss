@@ -81,8 +81,17 @@
 }
 
 .menu{
-    height: 30vh;
-    width: 10vw;
+    text-align: center;
+    width: 250px;
+    height: 125px;
+    mat-icon{
+        margin-right: 35px;
+        font-size: 60px;
+    }
+    button{
+        width: 70px;
+        margin-left: 90px;
+    }
 }
 
 .user-icon mat-icon{

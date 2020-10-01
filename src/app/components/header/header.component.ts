@@ -9,6 +9,8 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  user:string
+  email:string
   @Output() public sidenavToggle = new EventEmitter();
   userService: UserService
   private route:Router
@@ -19,6 +21,8 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.user=localStorage.getItem("user");
+    this.email=localStorage.getItem("email");
   }
 
   public onToggleSidenav = () => {
