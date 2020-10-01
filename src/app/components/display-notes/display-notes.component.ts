@@ -49,7 +49,7 @@ export class DisplayNotesComponent implements OnInit {
   openDialog(note){
     const dialogRef = this.dialog.open(NoteDialogComponent, {
       panelClass: 'myapp-no-padding-dialog',
-      data: {'title': note.title, 'description': note.description,'noteId':note.id}
+      data: {'title': note.title, 'description': note.description,'noteId':note.id,'color':note.color}
     });
 
     dialogRef.afterClosed().subscribe(result => {

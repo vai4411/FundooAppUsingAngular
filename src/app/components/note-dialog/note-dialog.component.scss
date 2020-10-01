@@ -48,7 +48,33 @@
         display: block;
     }
 
-    i, button{
+    button{
         display: block;
+    }
+}
+
+.buttons{
+    width: 250px;
+    app-archive-button{
+        color: gray;
+    }
+
+    app-trash-button{
+        color: gray;
+    }
+
+    app-color-panel{
+        color: gray;
+    }
+    app-archive-button:hover{
+        color: black;
+    }
+
+    app-trash-button:hover{
+        color: black;
+    }
+
+    app-color-panel:hover{
+        color: black;
     }
 }

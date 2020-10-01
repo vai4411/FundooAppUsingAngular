@@ -1,18 +1,21 @@
-<mat-card class="active-add-note">
+<mat-card class="active-add-note" [ngStyle]="{'background-color' : color}">
     <form (ngSubmit)="updateNote()">
     <div fxLayout="row" class="active-input">
-        <input type="text" placeholder="title" value="{{title}}" (input)="changeTitle($event.target.value);">
+        <input type="text" placeholder="title" value="{{title}}" (input)="changeTitle($event.target.value);"
+        [ngStyle]="{'background-color' : color}">
     </div>
-    <div fxLayout="row" class="note-input">
-        <textarea type="text" placeholder="Take a note" value="{{description}}" (input)="changeDescription($event.target.value);">
+    <div fxLayout="row" class="note-input" >
+        <textarea type="text" placeholder="Take a note" value="{{description}}"
+        (input)="changeDescription($event.target.value);" [ngStyle]="{'background-color' : color}">
         </textarea>
     </div>
     <div fxLayout="row" fxLayoutAlign="space-between center" class="icons">
-        <div fxLayout="row">
-            <i class="fas fa-palette"></i>
-            <i class="fas fa-archive"></i>
+        <div fxLayout="row" fxLayoutAlign="space-around" class="buttons">
+            <app-color-panel [noteId]="noteId"></app-color-panel>
+            <app-archive-button [noteId]="noteId"></app-archive-button>
+            <app-trash-button [noteId]="noteId"></app-trash-button>
         </div>
-        <button mat-raised-button class="close-button">Close</button>
+        <button mat-raised-button class="close-button" [ngStyle]="{'background-color' : color}">Close</button>
     </div>
     </form>
 </mat-card>

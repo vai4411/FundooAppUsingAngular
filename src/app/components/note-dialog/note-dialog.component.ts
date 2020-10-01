@@ -3,6 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UserService } from 'src/app/service/user_service/user.service';
 
 export interface DialogData {
+  color: string;
   title: string;
   description: string;
   noteId:string;
@@ -17,6 +18,8 @@ export class NoteDialogComponent implements OnInit {
 
   title:string
   description:string
+  color:string
+  noteId:string
   userService:UserService
 
   changeTitle(value){
@@ -33,7 +36,9 @@ export class NoteDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: DialogData, userService: UserService) {
       this.title=data.title;
       this.description=data.description;
-      this.userService=userService
+      this.color=data.color
+      this.noteId=data.noteId
+      this.userService=userService;
       this.dialogRef=dialogRef;
       dialogRef.beforeClosed().subscribe(() => { data.title=this.title; data.description=this.description;dialogRef.close(data)});
     }

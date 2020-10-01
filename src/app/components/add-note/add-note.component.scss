@@ -50,6 +50,10 @@
     color: grey;
 }
 
+.icon{
+    width: 250px;
+}
+
 .active-add-note{
     min-height: 12vh;
     width: 42vw;
@@ -66,5 +70,6 @@
 
     i, button{
         display: block;
+        color: grey;
     }
 }
