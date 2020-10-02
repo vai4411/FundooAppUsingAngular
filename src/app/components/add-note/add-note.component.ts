@@ -3,6 +3,8 @@ import { UserService } from '../../service/user_service/user.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/service/data_service/data.service';
+import { Subject } from 'rxjs';
+import { SubjectService } from 'src/app/service/data_behavior_subject/subject.service';
 
 @Component({
   selector: 'app-add-note',
@@ -21,15 +23,19 @@ export class AddNoteComponent implements OnInit {
   userService:UserService;
   router:Router;
   dataService:DataService;
+  message:string;
+  subject:SubjectService;
 
-  constructor(userService:UserService,router:Router,dataService:DataService) {
+  constructor(userService:UserService,router:Router,subject:SubjectService) {
     this.userService=userService;
     this.router=router;
-    this.dataService = dataService;
+    this.subject=subject;
   }
 
   ngOnInit(): void {
-
+    this.subject
+    .currentMessage
+    .subscribe(message => this.message = message);
   }
 
   setFlag(value:boolean){
@@ -55,8 +61,8 @@ export class AddNoteComponent implements OnInit {
         if(response['status']['success']){
           this.setFlag(false);
           this.addNote.reset();
-          this.dataService
-          .sendMessage("data");
+          this.subject
+          .changeMessage("data");
         }
       },
       error => console.log(error)
